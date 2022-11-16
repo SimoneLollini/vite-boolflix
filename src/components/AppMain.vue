@@ -20,7 +20,7 @@ export default {
 <template>
     <div class="container pt-4">
         <div class="row row-cols-4">
-            <MovieCard v-for="movie in store.movies" />
+            <MovieCard :movie="movie" v-for="movie in store.movies" />
         </div>
         <!-- /.row -->
     </div>

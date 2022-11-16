@@ -1,19 +1,25 @@
 <script>
 export default {
-    name: 'MovieCard'
+    name: 'MovieCard',
+    props: {
+        movie: Object
+    }
 }
 </script>
 
 <template>
-    <div class="col">
-        <div class="title">1. Titolo</div>
-        <!-- /.title -->
-        <div class="original_title">2. Titolo Originale</div>
-        <!-- /.original_title -->
-        <div class="lenguage">3. Lingua</div>
-        <!-- /.lenguage -->
-        <div class="vote">4. Voto</div>
-        <!-- /.vote -->
+    <div class="col text-dark g-4">
+        <div class="card">
+            <div class="title">{{ movie.title }}</div>
+            <!-- /.title -->
+            <div class="original_title">{{ movie.original_title }}</div>
+            <!-- /.original_title -->
+            <div class="lenguage">{{ movie.original_language }}</div>
+            <!-- /.lenguage -->
+            <div class="vote">{{ movie.vote_average }}</div>
+            <!-- /.vote -->
+        </div>
+
     </div>
     <!-- /.col -->
 </template>
