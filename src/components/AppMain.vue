@@ -6,14 +6,14 @@ export default {
     name: 'AppMain',
     components: {
         MovieCard,
+    }, props: {
+        movie: Object
     },
     data() {
         return {
             store
         }
-    }, methods: {
-
-    }
+    },
 }
 </script>
 

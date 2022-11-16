@@ -1,8 +1,17 @@
 <script>
+import { store } from "../store.js";
+import LenguageFlag from './LenguageFlag.vue'
 export default {
     name: 'MovieCard',
     props: {
         movie: Object
+    },
+    data() {
+        return {
+            store
+        }
+    }, components: {
+        LenguageFlag,
     }
 }
 </script>
@@ -10,13 +19,17 @@ export default {
 <template>
     <div class="col text-dark g-4">
         <div class="card">
-            <div class="title">{{ movie.title }}</div>
+            <div class="title">Titolo: "{{ movie.title }}"</div>
             <!-- /.title -->
-            <div class="original_title">{{ movie.original_title }}</div>
+            <div class="original_title">Titolo originale: "{{ movie.original_title }}"</div>
             <!-- /.original_title -->
-            <div class="lenguage">{{ movie.original_language }}</div>
+            <div class="lenguage d-flex gap-1">
+                <span>Lingua originale:</span>
+
+                <LenguageFlag :movie="movie" />
+            </div>
             <!-- /.lenguage -->
-            <div class="vote">{{ movie.vote_average }}</div>
+            <div class="vote">Voto: "{{ movie.vote_average }}"</div>
             <!-- /.vote -->
         </div>
 
