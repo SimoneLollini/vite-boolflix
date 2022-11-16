@@ -1,5 +1,5 @@
 <script>
-import SearchBar from './partials/SearchBar.vue';
+import SearchBar from './SearchBar.vue';
 export default {
     name: 'AppHeader',
     components: {
