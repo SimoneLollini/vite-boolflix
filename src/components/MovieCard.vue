@@ -1,6 +1,6 @@
 <script>
 import { store } from "../store.js";
-import LenguageFlag from './LenguageFlag.vue'
+import LenguageFlag from './LanguageFlag.vue'
 export default {
     name: 'MovieCard',
     props: {
