@@ -15,19 +15,6 @@ export default {
     return {
       store
     }
-  }, methods: {
-    SearchForMovie() {
-
-      if (store.MovieToSearch === '') {
-        return console.log('Non hai inserito nessun parametro di ricerca!');
-      }
-      // console.log(store.MovieToSearch);
-      const url = `${store.API_URL_ALL_SHOW + store.MyKey}&language=en-US&query=${store.MovieToSearch}+&page=1&include_adult=false`
-      // console.log(url);
-      store.callApi(url)
-
-
-    }
   }
 }
 
@@ -35,7 +22,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader @CallSearch="SearchForMovie" />
+  <AppHeader />
   <AppMain />
   <AppFooter />
 </template>
