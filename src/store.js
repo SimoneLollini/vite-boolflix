@@ -12,9 +12,11 @@ export const store = reactive({
     error: null,
     movies: null,
     MovieToSearch: '',
+    // Vote: Math.ceil(this.movies.vote_average / 2),
     MyKey: '6db07583fc025247bca397776572d0c2',
     API_URL_MOVIE: 'https://api.themoviedb.org/3/search/movie?api_key=',
     API_URL_ALL_SHOW: 'https://api.themoviedb.org/3/search/movie?api_key=',
+    API_URL_IMG: 'https://image.tmdb.org/t/p/w342',
     callApi(url) {
         axios.get(url)
             .then(response => {
@@ -26,6 +28,10 @@ export const store = reactive({
                 console.error(err.message);
 
             })
+    },
+    VoteCeil(vote) {
+        return Math.ceil(vote / 2)
+
     }
 },
 )

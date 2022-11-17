@@ -28,8 +28,18 @@ export default {
                 <LenguageFlag :movie="movie" />
             </div>
             <!-- /.lenguage -->
-            <div class="vote">Voto: "{{ movie.vote_average }}"</div>
+            <!-- <div class="vote">Voto: "{{ Math.ceil(movie.vote_average / 2) }}"</div> -->
+            <div class="vote">
+                Voto: {{ store.VoteCeil(movie.vote_average) }}/5
+                <img class="star" src="../assets/img/star.png" alt="star"
+                    v-for="star in store.VoteCeil(movie.vote_average)">
+            </div>
+
             <!-- /.vote -->
+            <div class="image">
+                <img :src="store.API_URL_IMG + movie.poster_path" :alt="movie.title">
+            </div>
+            <!-- /.image -->
         </div>
 
     </div>
@@ -37,5 +47,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+.star {
+    width: 1rem;
+    margin: 1%;
+}
 </style>

@@ -1,5 +1,9 @@
 @use '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
+img {
+  max-width: 100%;
+}
+
 body {
   background-color: rgb(30, 30, 30);
   color: white;
