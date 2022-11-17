@@ -25,7 +25,6 @@ export default {
             <!-- /.original_title -->
             <div class="lenguage d-flex gap-1">
                 <span>Lingua originale:</span>
-
                 <LenguageFlag :movie="movie" />
             </div>
             <!-- /.lenguage -->
