@@ -11,7 +11,7 @@ import axios from "axios";
 export const store = reactive({
     error: null,
     movies: null,
-    MovieToSearch: 'spiderman',
+    MovieToSearch: '',
     // Vote: Math.ceil(this.movies.vote_average / 2),
     MyKey: '6db07583fc025247bca397776572d0c2',
     API_URL_MOVIE: 'https://api.themoviedb.org/3/search/movie?api_key=',

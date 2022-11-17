@@ -37,10 +37,16 @@ export default {
                 </div>
                 <!-- /.lenguage -->
                 <div class="vote">
-                    <div class="vote_text"> Voto: {{ store.VoteCeil(movie.vote_average) }}/5</div>
                     <div class="star_rating">
-                        <img class="star" src="../assets/img/star.png" alt="star"
-                            v-for="star in store.VoteCeil(movie.vote_average)">
+                        <div v-if="store.VoteCeil(movie.vote_average) === 0">
+                            Nessun voto ricevuto
+                        </div>
+                        <div v-else>
+                            <div class="vote_text"> Voto: {{ store.VoteCeil(movie.vote_average) }}/5</div>
+                            <img class="star" src="../assets/img/star.png" alt="star"
+                                v-for="star in store.VoteCeil(movie.vote_average)">
+                        </div>
+
                     </div>
                 </div>
                 <!-- /.vote -->
