@@ -1,10 +1,11 @@
 @use '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@use '../scss/partials/variables.scss' as *;
 
 img {
   max-width: 100%;
 }
 
 body {
-  background-color: rgb(30, 30, 30);
+  background-color: $dark;
   color: white;
 }
