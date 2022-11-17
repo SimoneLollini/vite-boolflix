@@ -54,7 +54,13 @@ export default {
 <style lang="scss" scoped>
 .card_movie {
     &:hover {
-        display: none;
+        .card_back {
+            display: inline-block;
+        }
+
+        .card_front {
+            display: none;
+        }
 
     }
 
