@@ -18,13 +18,15 @@ export default {
 </script>
 
 <template>
-    <div class="container pt-4">
-        <div class="row row-cols-4">
-            <MovieCard :movie="movie" v-for="movie in store.movies" />
+    <main>
+        <div class="container pt-4">
+            <div class="row row-cols-3">
+                <MovieCard :movie="movie" v-for="movie in store.movies" />
+            </div>
+            <!-- /.row -->
         </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container -->
+        <!-- /.container -->
+    </main>
 </template>
 
 <style lang="scss" scoped>

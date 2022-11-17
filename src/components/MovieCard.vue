@@ -30,9 +30,11 @@ export default {
             <!-- /.lenguage -->
             <!-- <div class="vote">Voto: "{{ Math.ceil(movie.vote_average / 2) }}"</div> -->
             <div class="vote">
-                Voto: {{ store.VoteCeil(movie.vote_average) }}/5
-                <img class="star" src="../assets/img/star.png" alt="star"
-                    v-for="star in store.VoteCeil(movie.vote_average)">
+                <div class="vote_text"> Voto: {{ store.VoteCeil(movie.vote_average) }}/5</div>
+                <div class="star_rating">
+                    <img class="star" src="../assets/img/star.png" alt="star"
+                        v-for="star in store.VoteCeil(movie.vote_average)">
+                </div>
             </div>
 
             <!-- /.vote -->
