@@ -18,8 +18,9 @@ export const store = reactive({
     callApi(url) {
         axios.get(url)
             .then(response => {
-                console.log(response);
+                // console.log(response);
                 this.movies = response.data.results
+
 
             }).catch(err => {
                 console.error(err.message);

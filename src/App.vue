@@ -17,15 +17,16 @@ export default {
     }
   }, methods: {
     SearchForMovie() {
-      if (store.movies === null) {
-        return console.log('movies è vuoto!');
-      }
 
-      console.log('hai invocato la funzione SearchForMovie');
+      if (store.MovieToSearch === '') {
+        return console.log('Non hai inserito nessun parametro di ricerca!');
+      }
       // console.log(store.MovieToSearch);
       const url = `${store.API_URL_ALL_SHOW + store.MyKey}&language=en-US&query=${store.MovieToSearch}+&page=1&include_adult=false`
       // console.log(url);
+
       store.callApi(url)
+
 
     }
   }
