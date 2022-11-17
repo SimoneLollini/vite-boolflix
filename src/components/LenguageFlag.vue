@@ -23,7 +23,7 @@ export default {
     <div class="lenguage_flag" v-else-if="movie.original_language === 'es'">🇪🇸</div>
     <div class="lenguage_flag" v-else-if="movie.original_language === 'fr'">🇲🇫</div>
     <div class="lenguage_flag" v-else-if="movie.original_language === 'de'">🇩🇪</div>
-    <div class="lenguage_flag">{{ movie.original_language }}</div>
+    <div class="lenguage_flag" v-else>{{ movie.original_language }}</div>
     <!-- <div class="lenguage_flag">{{ movie.original_language }}</div>
 
 <img class="language_flag" :src="'../assets/img/flags/4-3/' + movie.original_language + '.svg'"
