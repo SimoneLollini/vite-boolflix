@@ -26,7 +26,7 @@ export default {
     <div class="lenguage_flag">{{ movie.original_language }}</div>
     <!-- <div class="lenguage_flag">{{ movie.original_language }}</div>
 
-<img class="language-flag" :src="'../assets/img/flags/4-3/' + movie.original_language + '.svg'"
+<img class="language_flag" :src="'../assets/img/flags/4-3/' + movie.original_language + '.svg'"
         :alt="movie.original_language"> -->
 </template>
 
