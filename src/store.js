@@ -12,6 +12,7 @@ export const store = reactive({
     error: null,
     movies: null,
     shows: null,
+    isVisible: false,
     MovieToSearch: '',
     MyKey: '6db07583fc025247bca397776572d0c2',
     API_URL_MOVIE: 'https://api.themoviedb.org/3/search/movie?api_key=',
@@ -26,14 +27,15 @@ export const store = reactive({
         });
     }, SearchForMovie() {
         if (store.MovieToSearch === '') {
-            return console.log('Non hai inserito nessun parametro di ricerca!');
+            console.log('Non hai inserito nessun parametro di ricerca!');
+            return store.isVisible = false
         }
         const API_URL_MOVIE = `${store.API_URL_MOVIE + store.MyKey}&query=${store.MovieToSearch}+&page=1&include_adult=false`
         const API_URL_SERIES = `${store.API_URL_SERIES + store.MyKey}&query=${store.MovieToSearch}+&page=1&include_adult=false`
         const Allmovies = axios.get(API_URL_MOVIE);
         const AllTv = axios.get(API_URL_SERIES);
-
         store.callApi(Allmovies, AllTv)
+        store.isVisible = true
     },
     isLang(lang) {
         if (lang === 'en') {
