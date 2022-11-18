@@ -12,16 +12,28 @@ body {
 
 
 .card_body {
+  position: relative;
+  height: 325px;
+
+
   &:hover {
-    height: 325px;
+    transition: 1s;
+    transform: scale(1.1);
 
     .card_back {
-      display: inline-block;
+      transition: 1s;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
 
     }
 
     .card_front {
-      display: none;
+      img {
+        transition: 3s;
+        opacity: 0.3;
+      }
     }
 
   }
@@ -41,7 +53,7 @@ body {
 
   .card_back {
     color: white;
-    display: none;
+    opacity: 0;
 
     .star {
       width: 1rem;
