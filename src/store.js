@@ -25,7 +25,7 @@ export const store = reactive({
             this.shows = response[1].data.results
             console.log(this.movies, this.tvShows);
         });
-    }, SearchForMovie() {
+    }, searchForMovie() {
         if (store.MovieToSearch === '') {
             console.log('Non hai inserito nessun parametro di ricerca!');
             return store.isVisible = false
@@ -51,7 +51,7 @@ export const store = reactive({
         }
         return lang
     },
-    VoteCeil(vote) {
+    voteCeil(vote) {
         return Math.ceil(vote / 2)
 
     }

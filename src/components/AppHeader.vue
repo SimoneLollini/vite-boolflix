@@ -17,7 +17,7 @@ export default {
     <header>
         <div class="container d-flex justify-content-between align-items-center">
             <img class="logo" src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg" alt="">
-            <SearchBar @CallSearch="store.SearchForMovie" />
+            <SearchBar @CallSearch="store.searchForMovie" />
         </div>
     </header>
     <div class="hero_image"></div>

@@ -14,7 +14,7 @@ export default {
 
 <template>
     <div class="search_bar gap-2 pt-2">
-        <input class="form_control" @keyup.enter="$emit('CallSearch')" type="text" placeholder="Search"
+        <input class="form_control" @keyup.enter="$emit('CallSearch')" type="text" placeholder="Cerca"
             v-model="store.MovieToSearch">
         <button class="btn_danger" @click="$emit('CallSearch')">Cerca</button>
     </div>

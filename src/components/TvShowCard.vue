@@ -25,9 +25,9 @@ export default {
             </div>
             <!-- /.card_front -->
             <div class="card_back">
-                <div class="title">Titolo: "{{ show.title }}"</div>
+                <div class="title">Titolo: "{{ show.name }}"</div>
                 <!-- /.title -->
-                <div class="original_title">Titolo originale: "{{ show.original_title }}"</div>
+                <div class="original_title">Titolo originale: "{{ show.original_name }}"</div>
                 <!-- /.original_title -->
                 <div class="lenguage d-flex gap-1">
                     <span>Lingua originale:</span>
@@ -36,13 +36,13 @@ export default {
                 <!-- /.lenguage -->
                 <div class="vote">
                     <div class="star_rating">
-                        <div v-if="store.VoteCeil(show.vote_average) === 0">
+                        <div v-if="store.voteCeil(show.vote_average) === 0">
                             Nessun voto ricevuto
                         </div>
                         <div v-else>
-                            <div class="vote_text"> Voto: {{ store.VoteCeil(show.vote_average) }}/5</div>
+                            <div class="vote_text"> Voto: {{ store.voteCeil(show.vote_average) }}/5</div>
                             <img class="star" src="../assets/img/star.png" alt="star"
-                                v-for="star in store.VoteCeil(show.vote_average)">
+                                v-for="star in store.voteCeil(show.vote_average)">
                         </div>
 
                     </div>
