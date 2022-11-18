@@ -1,6 +1,6 @@
 <script>
 import { store } from "../store.js";
-import LenguageFlag from './LanguageFlag.vue'
+
 export default {
     name: 'TvShowCard',
     props: {
@@ -10,9 +10,7 @@ export default {
         return {
             store
         }
-    }, components: {
-        LenguageFlag,
-    }
+    },
 }
 </script>
 
@@ -33,7 +31,7 @@ export default {
                 <!-- /.original_title -->
                 <div class="lenguage d-flex gap-1">
                     <span>Lingua originale:</span>
-                    <!-- <LenguageFlag :show="show" /> -->
+                    {{ store.isLang(show.original_language) }}
                 </div>
                 <!-- /.lenguage -->
                 <div class="vote">

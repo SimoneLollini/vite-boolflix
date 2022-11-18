@@ -35,8 +35,20 @@ export const store = reactive({
 
         store.callApi(Allmovies, AllTv)
     },
-
-
+    isLang(lang) {
+        if (lang === 'en') {
+            return lang = '🇬🇧'
+        } else if (lang === 'it') {
+            return lang = '🇮🇹'
+        } else if (lang === 'es') {
+            return lang = '🇪🇸'
+        } else if (lang === 'fr') {
+            return lang = '🇲🇫'
+        } else if (lang === 'de') {
+            return lang = '🇩🇪'
+        }
+        return lang
+    },
     VoteCeil(vote) {
         return Math.ceil(vote / 2)
 
