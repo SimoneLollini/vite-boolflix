@@ -28,7 +28,22 @@ export default {
     justify-content: center;
 
     input {
-        height: 30px;
+        font-weight: 200;
+        color: white;
+        border-radius: 5px;
+        height: 1.5rem;
+        width: 180px;
+        background-color: #333333;
+        border: none;
+        border-bottom: 1px solid #8c8c8c;
+        padding: 0 10px;
+
+    }
+
+    ::placeholder {
+        opacity: 0.3;
+        font-weight: 200;
+        color: white;
     }
 
     .btn_danger {
