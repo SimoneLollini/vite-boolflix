@@ -1,13 +1,15 @@
 <script>
 import { store } from "../store.js";
 import MovieCard from "../components/MovieCard.vue";
-
+import TvShowCard from "../components/TvShowCard.vue";
 export default {
     name: 'AppMain',
     components: {
         MovieCard,
+        TvShowCard
     }, props: {
-        movie: Object
+        movie: Object,
+        show: Object,
     },
     data() {
         return {
@@ -20,9 +22,17 @@ export default {
 <template>
     <main>
         <div class="container pt-4">
+            <h2 class="text-white">Film</h2>
             <div class="row row-cols-4">
                 <MovieCard :movie="movie" v-for="movie in store.movies" />
             </div>
+            <!-- /.movie -->
+            <h2 class="text-white">Serie TV</h2>
+            <div class="row row-cols-4">
+                <TvShowCard :show="show" v-for="show in store.shows" />
+            </div>
+            <!-- /.tv show -->
+
             <!-- /.row -->
         </div>
         <!-- /.container -->

@@ -3,7 +3,8 @@ import { store } from "../store.js";
 export default {
     name: 'LenguageFlag',
     props: {
-        movie: Object
+        movie: Object,
+        show: Object
     },
     data() {
         return {
