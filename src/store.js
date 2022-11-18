@@ -23,7 +23,7 @@ export const store = reactive({
             .then(response => {
                 // console.log(response);
                 this.movies = response.data.results
-
+                console.log(this.movies);
 
             }).catch(err => {
                 console.error(err.message);
