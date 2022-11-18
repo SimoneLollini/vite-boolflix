@@ -16,7 +16,7 @@ export default {
 
 <template>
     <div class="col text-dark g-4 gy-5">
-        <div class="card_movie">
+        <div class="card_body">
             <div class="card_front">
                 <div class="image">
                     <img :src="store.API_URL_IMG + movie.poster_path" :alt="movie.title">
@@ -57,43 +57,5 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.card_movie {
-    &:hover {
-        height: 325px;
 
-        .card_back {
-            display: inline-block;
-
-        }
-
-        .card_front {
-            display: none;
-        }
-
-    }
-
-    .card_front {
-        color: white;
-
-
-
-        img {
-            object-fit: cover;
-            border-radius: 1px;
-        }
-
-
-    }
-
-    .card_back {
-        color: white;
-        display: none;
-
-        .star {
-            width: 1rem;
-            margin: 1%;
-        }
-
-    }
-}
 </style>
