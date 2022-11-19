@@ -1,7 +1,6 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
-import AppFooter from "./components/AppFooter.vue";
 import { store } from "./store.js";
 
 export default {
@@ -9,7 +8,6 @@ export default {
   components: {
     AppHeader,
     AppMain,
-    AppFooter
   },
   data() {
     return {
@@ -23,8 +21,9 @@ export default {
 
 <template>
   <AppHeader />
-  <AppMain />
-  <AppFooter />
+  <div class="wrapper">
+    <AppMain />
+  </div>
 </template>
 
 <style lang="scss" scoped>

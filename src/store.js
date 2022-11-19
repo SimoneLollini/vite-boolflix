@@ -36,6 +36,11 @@ export const store = reactive({
         const AllTv = axios.get(API_URL_SERIES);
         store.callApi(Allmovies, AllTv)
         store.isVisible = true
+        setTimeout(function () {
+            console.log('fuzione asincrona');
+            window.scrollTo(0, 550)
+        }, 300)
+
     },
     isLang(lang) {
         if (lang === 'en') {
